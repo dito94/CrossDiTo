@@ -1,0 +1,50 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import { getDocs } from '../lib/docs';
+import { withBase } from '../lib/paths';
+
+const docs = await getDocs();
+const featuredDocs = docs.filter((doc) =>
+  ['user-guide', 'installation', 'reader-features', 'webserver'].includes(doc.slug)
+);
+---
+
+<SiteLayout
+  title="CrossDiTo"
+  description="Focused open-source e-reader firmware for the Xteink X4 Pro."
+  pageClass="home"
+>
+  <section slot="hero" class="hero">
+    <div class="hero-copy">
+      <p class="eyebrow">A personal fork of <a href="https://crosspointreader.com/">CrossPoint</a></p>
+      <h1>Cross<span class="crossdito-serif">DiTo</span></h1>
+      <p class="hero-text">
+        Minimal reading stats and improved UX.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href={withBase('installation.html')}>Installation Instructions</a>
+        <a class="button" href={withBase('reader-features.html')}>Explore features</a>
+      </div>
+    </div>
+    <img
+      src={withBase('images/bitter-small-15-margin.jpg')}
+      alt="CrossDiTo typography preview"
+      class="hero-image"
+      loading="eager"
+    />
+  </section>
+
+  <section class="section-heading">
+    <p class="eyebrow">Start here</p>
+    <h2>Useful docs</h2>
+  </section>
+  <nav class="useful-docs" aria-label="Useful documentation">
+    {
+      featuredDocs.map((doc) => (
+        <a href={doc.url}>
+          <span>{doc.title}</span>
+        </a>
+      ))
+    }
+  </nav>
+</SiteLayout>
