@@ -29,4 +29,3 @@ class CarouselCoverTouch {
   int downIndex = -1;
   bool downWasSelected = false;
 };
-

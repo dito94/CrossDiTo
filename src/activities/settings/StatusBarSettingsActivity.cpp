@@ -494,8 +494,7 @@ void StatusBarSettingsActivity::render(RenderLock&&) {
 
   renderer.drawText(UI_10_FONT_ID, previewX, previewLabelY, tr(STR_PREVIEW));
   GUI.drawStatusBar(renderer, 75, 8, 32, title, bottomPreviewPadding, 0, false, timeLeftPreview, false, -1.0f,
-                    stablePageNumbersAvailable ? 120 : 0, stablePageNumbersAvailable ? 540 : 0, true, false, 240,
-                    720);
+                    stablePageNumbersAvailable ? 120 : 0, stablePageNumbersAvailable ? 540 : 0, true, false, 240, 720);
 
   renderer.displayBuffer();
 }

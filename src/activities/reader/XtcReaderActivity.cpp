@@ -844,8 +844,8 @@ void XtcReaderActivity::renderStatusBarOverlay(const StatusBarOverlayPosition po
   char timeLeftLabel[24] = {};
   const char* timeLeft = formatTimeLeftLabel(timeLeftLabel, sizeof(timeLeftLabel)) ? timeLeftLabel : nullptr;
   GUI.drawStatusBar(renderer, progress, pageInfo.currentPage, pageInfo.pageCount, pageInfo.title, paddingBottom, 0,
-                    false, timeLeft, false, -1.0f, 0, 0, true, false,
-                    static_cast<uint32_t>(displayPage), static_cast<uint32_t>(pageCount));
+                    false, timeLeft, false, -1.0f, 0, 0, true, false, static_cast<uint32_t>(displayPage),
+                    static_cast<uint32_t>(pageCount));
 }
 
 void XtcReaderActivity::renderPage() {

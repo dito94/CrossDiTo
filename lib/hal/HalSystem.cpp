@@ -83,8 +83,7 @@ void IRAM_ATTR captureArduinoPanic(arduino_panic_info_t* info, void*) {
   if (info->backtrace_corrupt) panicCapture.flags |= PANIC_FLAG_BACKTRACE_CORRUPT;
 
   const size_t sourceLength = info->backtrace_len;
-  const size_t copyLength =
-      sourceLength < MAX_PANIC_BACKTRACE_DEPTH ? sourceLength : MAX_PANIC_BACKTRACE_DEPTH;
+  const size_t copyLength = sourceLength < MAX_PANIC_BACKTRACE_DEPTH ? sourceLength : MAX_PANIC_BACKTRACE_DEPTH;
   for (size_t i = 0; i < copyLength; ++i) {
     panicCapture.backtrace[i] = info->backtrace[i];
   }

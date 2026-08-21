@@ -901,8 +901,8 @@ void BaseTheme::drawStatusBar(GfxRenderer& renderer, const float bookProgress, c
     }
 
     if (showPageCount && showStablePageNumbers && statusBar.showBookProgressPercent) {
-      snprintf(progressStr, sizeof(progressStr), "%s  %d/%d  %.0f%%", pageNumberStr, stableCurrentPage,
-               stablePageCount, bookProgress);
+      snprintf(progressStr, sizeof(progressStr), "%s  %d/%d  %.0f%%", pageNumberStr, stableCurrentPage, stablePageCount,
+               bookProgress);
     } else if (showPageCount && showStablePageNumbers) {
       snprintf(progressStr, sizeof(progressStr), "%s  %d/%d", pageNumberStr, stableCurrentPage, stablePageCount);
     } else if (showPageCount && statusBar.showBookProgressPercent) {

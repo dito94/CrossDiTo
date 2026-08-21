@@ -483,10 +483,10 @@ inline const std::vector<SettingInfo>& getBaseSettingsList() {
                             "bionicReadingEnabled", StrId::STR_CAT_READER));
     add(SettingInfo::Toggle(StrId::STR_GUIDE_READING, &CrossPointSettings::guideReadingEnabled, "guideReadingEnabled",
                             StrId::STR_CAT_READER));
-    add(SettingInfo::Enum(StrId::STR_INDEXING_METHOD, &CrossPointSettings::indexingMethod,
-                          {StrId::STR_INDEXING_INCREMENTAL, StrId::STR_INDEXING_FULL_SECTION,
-                           StrId::STR_INDEXING_FULL_BOOK},
-                          "indexingMethod", StrId::STR_CAT_READER));
+    add(SettingInfo::Enum(
+        StrId::STR_INDEXING_METHOD, &CrossPointSettings::indexingMethod,
+        {StrId::STR_INDEXING_INCREMENTAL, StrId::STR_INDEXING_FULL_SECTION, StrId::STR_INDEXING_FULL_BOOK},
+        "indexingMethod", StrId::STR_CAT_READER));
 
     // --- Controls ---
     add(SettingInfo::Enum(StrId::STR_SIDE_BTN_LAYOUT, &CrossPointSettings::sideButtonLayout,

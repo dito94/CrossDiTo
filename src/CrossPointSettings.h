@@ -605,8 +605,7 @@ class CrossPointSettings : public PersistableStore<CrossPointSettings> {
 
     bool textLaneVisible(bool clockAvailable) const {
       return pageCountMode != PAGE_COUNT_HIDE || showBookProgressPercent || showStablePageNumbers ||
-             titleMode != HIDE_TITLE ||
-             timeLeftMode != TIME_LEFT_HIDE || showBattery || (showClock && clockAvailable);
+             titleMode != HIDE_TITLE || timeLeftMode != TIME_LEFT_HIDE || showBattery || (showClock && clockAvailable);
     }
     bool showsProgressBar() const { return progressBarMode != HIDE_PROGRESS; }
     bool showsTitle() const { return titleMode != HIDE_TITLE; }

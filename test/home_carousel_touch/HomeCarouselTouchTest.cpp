@@ -6,16 +6,14 @@ TEST(CarouselCoverTouchTest, SideCoverTapSelectsWithoutActivating) {
   CarouselCoverTouch touch;
   touch.begin(/*bookIndex=*/2, /*wasSelected=*/false);
 
-  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/2, /*selectedWithoutDown=*/false),
-            CarouselCoverTouch::TapAction::Select);
+  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/2, /*selectedWithoutDown=*/false), CarouselCoverTouch::TapAction::Select);
 }
 
 TEST(CarouselCoverTouchTest, SelectedCoverTapActivates) {
   CarouselCoverTouch touch;
   touch.begin(/*bookIndex=*/1, /*wasSelected=*/true);
 
-  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/1, /*selectedWithoutDown=*/true),
-            CarouselCoverTouch::TapAction::Activate);
+  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/1, /*selectedWithoutDown=*/true), CarouselCoverTouch::TapAction::Activate);
 }
 
 TEST(CarouselCoverTouchTest, SwipeCancellationDiscardsSideCoverSelection) {
@@ -33,6 +31,5 @@ TEST(CarouselCoverTouchTest, SwipeCancellationDiscardsSideCoverSelection) {
 TEST(CarouselCoverTouchTest, MissingDownStillActivatesAlreadySelectedCover) {
   CarouselCoverTouch touch;
 
-  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/1, /*selectedWithoutDown=*/true),
-            CarouselCoverTouch::TapAction::Activate);
+  EXPECT_EQ(touch.releaseTap(/*bookIndex=*/1, /*selectedWithoutDown=*/true), CarouselCoverTouch::TapAction::Activate);
 }
