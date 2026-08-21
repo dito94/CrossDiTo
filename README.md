@@ -1,16 +1,16 @@
 # CrossDiTo
 
-> **A focused Xteink X4 Pro firmware fork of [CrossInk 1.5](https://github.com/uxjulia/CrossInk), itself based on [CrossPoint Reader](https://github.com/crosspoint-reader/crosspoint-reader).** CrossDiTo prioritizes reliable reading, responsive navigation, restrained power use, and clear typography.
+> **CrossDiTo is a personal Xteink X4 Pro test build made directly from [CrossInk 1.5.0](https://github.com/uxjulia/CrossInk), which is itself based on [CrossPoint Reader](https://github.com/crosspoint-reader/crosspoint-reader).** Full credit for the base firmware and every inherited feature belongs to the CrossInk, CrossPoint, and upstream contributors. This repository documents only the changes made on top of CrossInk.
 
 ### Supported Device
 
 - Xteink X4 Pro
 
-The current hardware-verified release is [CrossDiTo 1.5.1](./docs/releases/v1.5.1.md), based on CrossInk 1.5.0. The complete project history is in [CHANGELOG.md](./CHANGELOG.md).
+The current hardware-verified build is [CrossDiTo 1.5.1](./docs/releases/v1.5.1.md). Its [changelog](./CHANGELOG.md) contains only CrossDiTo-specific changes; CrossInk's own history remains with the upstream project.
 
 ## What's different in this fork
 
-CrossDiTo 1.5.1 starts from **CrossInk 1.5.0**. Everything in this section is a CrossDiTo change made after that baseline. Features already present in CrossInk—such as Bitter and Lexend fonts, reading statistics, bookmarks, Bionic Reading, themes, and button remapping—are deliberately not presented as fork highlights.
+CrossDiTo 1.5.1 starts from **CrossInk 1.5.0**. Everything below is a CrossDiTo-specific change made after that baseline. No inherited CrossInk features are presented as work from this fork.
 
 > [!NOTE]
 > The figures below are engineering estimates, not controlled battery or stopwatch benchmarks. EPUB structure, cache state, SD-card speed, frontlight warmth, radio use, and the e-ink waveform can materially change the result.
@@ -89,58 +89,6 @@ See the [CrossDiTo 1.5.1 release notes](./docs/releases/v1.5.1.md) for the item-
 
 ---
 
-## Inherited CrossInk reading features
-
-CrossDiTo retains CrossInk's reader fonts, statistics, themes, bookmarks, formatting, control mapping, sync options, and other reader features. The sections below document those inherited capabilities; they are not claimed as CrossDiTo-only changes.
-
-<table>
-  <tr>
-    <td align="center">
-      <img src="./docs/images/bitter-small-15-margin.jpg" alt="Font: Bitter, Size: 12 pt, Margin: 15" /><br/>
-      <em>Font: Bitter, Size: 12 pt, Margin: 15</em>
-    </td>
-    <td align="center">
-      <img src="./docs/images/reading-stats.jpg" alt="Reading Stats with custom front button mapping shown" /><br/>
-      <em>Reading Stats with custom front button mapping shown</em>
-    </td>
-  </tr>
-</table>
-
-### Reader Fonts
-
-The default fonts have been replaced with Lexend Deca and Bitter. These fonts have been chosen specifically to improve reading fluency and e-ink performance. These 'sturdier' typefaces feature uniform stroke weights and open geometries, allowing the X4 Pro to render crisp, high-contrast text with font-aliasing on while significantly reducing ghosting and artifacts.
-
-- [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca) - A research-backed sans-serif typeface designed to improve reading fluency. Lexend was engineered based on the theory that reading issues are often a design problem (visual crowding) rather than a cognitive one.
-- [Bitter](https://fonts.google.com/specimen/Bitter) - A "contemporary" slab serif typeface for text, it is specially designed for comfortably reading on digital screens. The consistent stroke weight of Bitter helps it render particularly well on e-ink devices. The medium weight has been chosen specifically for improved rendering on the X4 Pro.
-
-The UI now uses [Inter](https://fonts.google.com/specimen/Inter) as the display font which has improved readability at smaller sizes.
-
-### Emojis and Misc Glyphs
-
-- Support for a limited set of Unicode [Emoticons](https://unicode-explorer.com/b/1F600) and [Miscellaneous Symbols](https://unicode-explorer.com/b/2600) using [Noto Emoji](https://fonts.google.com/noto/specimen/Noto+Emoji) and [Noto Sans Symbols](https://fonts.google.com/noto/specimen/Noto+Sans+Symbols) font.
-
----
-
-### Font Sizes
-
-CrossDiTo includes 10 pt, 12 pt, 14 pt, and 16 pt built-in reader font sizes.
-
-See [SD Card Fonts](./docs/sd-card-fonts.md) for installing additional font families and size ranges.
-
----
-
-### Reader features
-
-Reader Options, Bionic Reading, Guide Dots, Force Paragraph Indents, reading stats, and finished-book behavior are documented in [Reader Features](./docs/reader-features.md).
-
-### Custom button actions
-
-CrossDiTo retains CrossInk's configurable button shortcuts.
-
-See [Controls](./docs/controls.md) for the full action list and defaults.
-
----
-
 ## Tips for the best reading experience
 
 CrossDiTo uses the X4 Pro's ESP32-S3 and PSRAM, but internal RAM and e-ink bandwidth are still constrained compared with a phone, tablet, or desktop app.
@@ -170,6 +118,8 @@ See [Installation](./docs/installation.md) for step-by-step flashing and revert 
 ---
 
 ## Documentation
+
+These links are operating manuals for the complete firmware, including inherited upstream behavior. They are documentation, not claims that CrossDiTo created those capabilities.
 
 - [User Guide](./docs/user-guide.md)
 - [Installation](./docs/installation.md)

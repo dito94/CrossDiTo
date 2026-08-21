@@ -5,7 +5,9 @@ nav_order: 1
 
 # CrossDiTo
 
-Welcome to CrossDiTo, a personal fork of CrossPoint Reader.
+CrossDiTo is a personal Xteink X4 Pro test build made directly from [CrossInk 1.5.0](https://github.com/uxjulia/CrossInk), which is based on [CrossPoint Reader](https://github.com/crosspoint-reader/crosspoint-reader). Full credit for the base firmware and inherited functionality belongs to those upstream projects and their contributors.
+
+CrossDiTo's release notes and overview list only the modifications made on top of CrossInk. The user guides remain available solely to explain how to operate the resulting firmware.
 
 [View on GitHub](https://github.com/dito94/CrossDiTo)
 
